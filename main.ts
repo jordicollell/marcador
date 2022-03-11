@@ -1,4 +1,5 @@
 function restar () {
+    music.playTone(262, music.beat(BeatFraction.Sixteenth))
     marcador += -1
     if (marcador == -1) {
         marcador = 0
@@ -16,10 +17,11 @@ input.onButtonPressed(Button.A, function () {
     sumar()
 })
 input.onButtonPressed(Button.AB, function () {
-    marcador = 0
+    marcador = marcador - 0
     basic.showNumber(marcador)
 })
 function sumar () {
+    music.playTone(262, music.beat(BeatFraction.Sixteenth))
     marcador += 1
     if (marcador == 10) {
         marcador = 9
